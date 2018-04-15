@@ -44,4 +44,32 @@ Public Class Form1
             Exit Sub
         End If
     End Sub
+
+    Private Async Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim frm As New ProgressForm(10)
+        frm.Show()
+
+        For i = 0 To 9
+            Await Task.Run(
+                Sub()
+                    RunHeavyTask()
+                End Sub
+            )
+
+            frm.UpdateProgress(i + 1)
+
+            If frm.IsCancel Then
+                MsgBox("キャンセルされました。")
+                frm.Close()
+                Exit Sub
+            End If
+        Next
+
+        MsgBox("処理完了")
+        frm.Close()
+    End Sub
+
+    Private Sub RunHeavyTask()
+        System.Threading.Thread.Sleep(500)
+    End Sub
 End Class
