@@ -25,6 +25,7 @@ Partial Class Form1
         Me.NextButton = New System.Windows.Forms.Button()
         Me.PrevButton = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -66,14 +67,26 @@ Partial Class Form1
         Me.Button3.Text = "..."
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(213, 335)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(141, 58)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Progress"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.ClientSize = New System.Drawing.Size(1005, 675)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.PrevButton)
         Me.Controls.Add(Me.NextButton)
         Me.Controls.Add(Me.TextBox1)
+        Me.FormId = "001"
+        Me.FormName = "画面"
         Me.Location = New System.Drawing.Point(0, 0)
         Me.Name = "Form1"
         Me.ResumeLayout(False)
@@ -86,4 +99,5 @@ Partial Class Form1
     Friend WithEvents NextButton As Windows.Forms.Button
     Friend WithEvents PrevButton As Windows.Forms.Button
     Friend WithEvents Button3 As Windows.Forms.Button
+    Friend WithEvents Button1 As Windows.Forms.Button
 End Class
