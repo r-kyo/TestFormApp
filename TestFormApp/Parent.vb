@@ -31,6 +31,7 @@ Public Class Parent
         form.ParentForm = Me
         form.TopLevel = False
         Me.showingForm = form
+        Me.Text = form.FormId & " " & form.FormName
 
         ' 子フォーム表示
         ChildFormPanel.Controls.Add(form)
