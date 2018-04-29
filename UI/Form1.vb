@@ -1,4 +1,5 @@
-﻿
+﻿Imports Common
+
 Public Class Form1
 
     Private logic As New Logic.Form1Logic
@@ -71,5 +72,17 @@ Public Class Form1
 
     Private Sub RunHeavyTask()
         System.Threading.Thread.Sleep(500)
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        TestPanel.VisibleColor = SwitchingPanel.Color.Red
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        TestPanel.VisibleColor = SwitchingPanel.Color.Orange
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        TestPanel.VisibleColor = SwitchingPanel.Color.Yellow
     End Sub
 End Class

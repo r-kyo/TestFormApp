@@ -26,6 +26,10 @@ Partial Class Form1
         Me.PrevButton = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.TestPanel = New Common.SwitchingPanel()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -42,7 +46,7 @@ Partial Class Form1
         '
         'NextButton
         '
-        Me.NextButton.Location = New System.Drawing.Point(600, 330)
+        Me.NextButton.Location = New System.Drawing.Point(499, 295)
         Me.NextButton.Name = "NextButton"
         Me.NextButton.Size = New System.Drawing.Size(181, 63)
         Me.NextButton.TabIndex = 2
@@ -76,10 +80,49 @@ Partial Class Form1
         Me.Button1.Text = "Progress"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(105, 219)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 7
+        Me.Button2.Text = "red"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(267, 219)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 8
+        Me.Button4.Text = "yellow"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(186, 219)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 9
+        Me.Button5.Text = "orange"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'TestPanel
+        '
+        Me.TestPanel.VisibleColor = Common.SwitchingPanel.Color.Red
+        Me.TestPanel.Location = New System.Drawing.Point(0, 0)
+        Me.TestPanel.Name = "TestPanel"
+        Me.TestPanel.Size = New System.Drawing.Size(497, 107)
+        Me.TestPanel.TabIndex = 10
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.ClientSize = New System.Drawing.Size(1005, 675)
+        Me.Controls.Add(Me.TestPanel)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.PrevButton)
@@ -100,4 +143,8 @@ Partial Class Form1
     Friend WithEvents PrevButton As Windows.Forms.Button
     Friend WithEvents Button3 As Windows.Forms.Button
     Friend WithEvents Button1 As Windows.Forms.Button
+    Friend WithEvents Button2 As Windows.Forms.Button
+    Friend WithEvents Button4 As Windows.Forms.Button
+    Friend WithEvents Button5 As Windows.Forms.Button
+    Friend WithEvents TestPanel As Common.SwitchingPanel
 End Class
